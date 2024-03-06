@@ -152,3 +152,81 @@ thingbuf_hangup〉RUST_LOG=debug cargo run --bin tokio_mpsc                     
 [2024-03-06T07:35:24Z WARN  tokio_mpsc] Channel full. Waiting...
 ...
 ```
+
+## Logs
+
+Healthy
+
+```
+[2023-03-06T08:15:06Z WARN  thingbuf::mpsc::async_impl] Try send_ref
+[2023-03-06T08:15:06Z DEBUG thingbuf] thread ThreadId(3) line 196: push_ref entry
+[2023-03-06T08:15:06Z DEBUG thingbuf] thread ThreadId(3) line 202: push_ref loop starts
+[2023-03-06T08:15:06Z DEBUG thingbuf] thread ThreadId(3) line 227: idx: 22, state: 5142
+[2023-03-06T08:15:06Z WARN  thingbuf] Next tail: 5143
+[2023-03-06T08:15:06Z DEBUG thingbuf] thread ThreadId(3) line 240: Claimed tail slot [22]
+```
+
+Unhealthy / hung-up
+
+```
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 202: push_ref loop starts
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 294: if
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 227: idx: 77, state: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 301: tail at the end of the loop: 7757
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 286: head: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 202: push_ref loop starts
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 294: if
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 227: idx: 77, state: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 301: tail at the end of the loop: 7757
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 286: head: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 202: push_ref loop starts
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 294: if
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 227: idx: 77, state: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 301: tail at the end of the loop: 7757
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 286: head: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 202: push_ref loop starts
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 294: if
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 227: idx: 77, state: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 301: tail at the end of the loop: 7757
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 286: head: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 202: push_ref loop starts
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 294: if
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 227: idx: 77, state: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 301: tail at the end of the loop: 7757
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 286: head: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 202: push_ref loop starts
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 294: if
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 227: idx: 77, state: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 301: tail at the end of the loop: 7757
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 286: head: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 202: push_ref loop starts
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 294: if
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 227: idx: 77, state: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 301: tail at the end of the loop: 7757
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 286: head: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 202: push_ref loop starts
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 294: if
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 227: idx: 77, state: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 301: tail at the end of the loop: 7757
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 286: head: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 202: push_ref loop starts
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 294: if
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 301: tail at the end of the loop: 7757
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 227: idx: 77, state: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 202: push_ref loop starts
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 286: head: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 227: idx: 77, state: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 286: head: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 294: if
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 294: if
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 301: tail at the end of the loop: 7757
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 301: tail at the end of the loop: 7757
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 202: push_ref loop starts
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 202: push_ref loop starts
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 227: idx: 77, state: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 227: idx: 77, state: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 286: head: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 294: if
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(3) line 286: head: 7246
+[2024-03-06T08:16:20Z DEBUG thingbuf] thread ThreadId(2) line 301: tail at the end of the loop: 7757
+```
