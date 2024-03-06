@@ -62,6 +62,70 @@ thingbuf_hangup〉RUST_LOG=debug cargo run --bin thingbuf_sendref_pure
 (nothing printed after that point)
 ```
 
+```
+thingbuf_hangup〉RUST_LOG=debug cargo run --bin thingbuf_send_recvref
+   Compiling thingbuf_hangup v0.1.0 (...)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.75s
+     Running `target/debug/thingbuf_send_recvref`
+[2024-03-06T08:31:20Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316165, tv_nsec: 374087708 }
+[2024-03-06T08:31:21Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316166, tv_nsec: 374730026 }
+[2024-03-06T08:31:22Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316167, tv_nsec: 374896516 }
+[2024-03-06T08:31:23Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316168, tv_nsec: 374726066 }
+[2024-03-06T08:31:24Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316169, tv_nsec: 374027193 }
+[2024-03-06T08:31:25Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316170, tv_nsec: 374235150 }
+[2024-03-06T08:31:26Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316171, tv_nsec: 374856434 }
+[2024-03-06T08:31:27Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316172, tv_nsec: 374653910 }
+[2024-03-06T08:31:28Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316173, tv_nsec: 374669724 }
+[2024-03-06T08:31:29Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316174, tv_nsec: 374108117 }
+[2024-03-06T08:31:30Z DEBUG thingbuf_send_recvref] Slowdown starting...
+[2024-03-06T08:31:30Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316175, tv_nsec: 374461717 }
+[2024-03-06T08:31:31Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316176, tv_nsec: 374055222 }
+[2024-03-06T08:31:32Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316177, tv_nsec: 374820471 }
+[2024-03-06T08:31:33Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316178, tv_nsec: 374033907 }
+[2024-03-06T08:31:34Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316179, tv_nsec: 374615812 }
+[2024-03-06T08:31:35Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316180, tv_nsec: 374451224 }
+[2024-03-06T08:31:36Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316181, tv_nsec: 374290534 }
+[2024-03-06T08:31:37Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316182, tv_nsec: 374742021 }
+[2024-03-06T08:31:38Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316183, tv_nsec: 374805845 }
+[2024-03-06T08:31:39Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316184, tv_nsec: 374294119 }
+[2024-03-06T08:31:40Z INFO  thingbuf_send_recvref] Still alive: Instant { tv_sec: 316185, tv_nsec: 374514728 }
+[2024-03-06T08:31:40Z DEBUG thingbuf_send_recvref] Starting async feeding...
+
+(nothing printed after that point)
+```
+
+```
+thingbuf_hangup〉RUST_LOG=debug cargo run --bin thingbuf_send_no_try_recvref
+   Compiling thingbuf_hangup v0.1.0 (...)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.78s
+     Running `target/debug/thingbuf_send_no_try_recvref`
+[2024-03-06T08:37:35Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316540, tv_nsec: 970038923 }
+[2024-03-06T08:37:36Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316541, tv_nsec: 969999285 }
+[2024-03-06T08:37:37Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316542, tv_nsec: 970752111 }
+[2024-03-06T08:37:38Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316543, tv_nsec: 970710066 }
+[2024-03-06T08:37:39Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316544, tv_nsec: 970613752 }
+[2024-03-06T08:37:40Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316545, tv_nsec: 969890234 }
+[2024-03-06T08:37:41Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316546, tv_nsec: 970813811 }
+[2024-03-06T08:37:42Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316547, tv_nsec: 970618987 }
+[2024-03-06T08:37:43Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316548, tv_nsec: 970347568 }
+[2024-03-06T08:37:44Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316549, tv_nsec: 970413945 }
+[2024-03-06T08:37:45Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316550, tv_nsec: 970815619 }
+[2024-03-06T08:37:45Z DEBUG thingbuf_send_no_try_recvref] Slowdown starting...
+[2024-03-06T08:37:46Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316551, tv_nsec: 970252004 }
+[2024-03-06T08:37:47Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316552, tv_nsec: 970847633 }
+[2024-03-06T08:37:48Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316553, tv_nsec: 970367718 }
+[2024-03-06T08:37:49Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316554, tv_nsec: 969911982 }
+[2024-03-06T08:37:50Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316555, tv_nsec: 970736282 }
+[2024-03-06T08:37:51Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316556, tv_nsec: 970495000 }
+[2024-03-06T08:37:52Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316557, tv_nsec: 970057594 }
+[2024-03-06T08:37:53Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316558, tv_nsec: 970717780 }
+[2024-03-06T08:37:54Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316559, tv_nsec: 970015553 }
+[2024-03-06T08:37:55Z INFO  thingbuf_send_no_try_recvref] Still alive: Instant { tv_sec: 316560, tv_nsec: 970613333 }
+[2024-03-06T08:37:55Z DEBUG thingbuf_send_no_try_recvref] Starting async feeding...
+
+(nothing printed after that point)
+```
+
 ## Examples that work as expected
 
 ```
